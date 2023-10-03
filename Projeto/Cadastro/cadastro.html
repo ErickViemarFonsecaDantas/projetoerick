@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="cigarrofavicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../Login/style.css">
+    <title>Cadastro</title>
+    <style>
+        .main-login{
+            width: auto;
+        }
+        .card-login {
+            width: auto;
+            padding: 46px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+     <div class="container">
+       <a href="paginaprincipal.html">
+       <img src="../Imagens/Logo123Pitus.jpeg">
+       </a>
+       <h5>Contato:(31) 97356-0336</h5>
+    </div>
+    </header>
+
+    <form method="post" action="processa.php">
+        <div class="main-login">
+            <div class="rigth-login">
+                <div class="card-login">
+                    <h1 class="login">Cadastro</h1>
+                    <div class="textfield">
+                        <label for="usuario">Usuário</label>
+                        <input type="text" name="usuario" placeholder="Nome completo" id="usuario" required>
+                    </div>
+                    <div class="textfield">
+                        <label for="senha">Senha</label>
+                        <input type="password" name="Senha" placeholder="Senha" id="senha" required>
+                    </div>
+                    <div class="textfield">
+                        <label for="email">e-mail</label>
+                        <input type="text" name="email" placeholder="Digite seu E-mail" id="email" required>
+                    </div>
+                   
+                    <input type="submit" id="botao" value="Cadastrar" class="btn-login">
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

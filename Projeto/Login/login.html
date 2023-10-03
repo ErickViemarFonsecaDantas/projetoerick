@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>login</title>
+</head>
+
+<body>
+    <header>
+     <div class="container">
+       <a href="paginaprincipal.html">
+       <img src="../Imagens/Logo123Pitus-removebg-preview.png">
+       </a>
+       <h5>Contato: (31) 97356-0336</h5>
+    </div>
+    </header>
+
+    <form onsubmit="return validarFormulario(event)">
+        <div class="main-login">
+            <div class="left-login">
+                <img src="../Imagens/login-2-4verde-removebg-preview.png">
+                <h1>Realize o login<br>E comece a comprar</h1>
+            </div>
+            <div class="rigth-login">
+                <div class="card-login">
+                    <h1 class="login">LOGIN</h1>
+                    <div class="textfield">
+                        <label for="usuario">Usuário</label>
+                        <input type="text" name="usuario" placeholder="Usuário cadastrado" id="usuario" required>
+                    </div>
+                    <div class="textfield">
+                        <label for="senha">Senha</label>
+                        <input type="password" name="Senha" placeholder="Digite sua senha" id="senha" required>
+                    </div>
+                    <div class="end-login">
+                        <a href= "../Cadastro/cadastro.html">Esqueci minha senha</a>
+                    </div>
+                    <input type="submit" id="botao" value="Entrar" class="btn-login">
+                    <div>
+                    <h5>Ainda não tem uma conta?<a href="../Cadastro/cadastro.html"> Cadastre-se</a></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+<script>
+    
+    function validarFormulario(event) {
+        event.preventDefault();
+
+        let username = document.getElementById('usuario').value;
+        let password = document.getElementById('senha').value;
+
+        if (username === "" || password === "") {
+            alert("Por favor, preencha todos os campos.");
+            return false;
+        }
+        if(username === "erick.dantas"  && password ==="erick"){
+            alert("logado com sucesso");
+            window.location.href = "file:///C:/Users/ErickDantas/OneDrive%20-%20123%20VIAGENS%20E%20TURISMO%20LTDA/-/%C3%81rea%20de%20Trabalho/Erick/HTML/Exercicios/login/paginaprincipal.html"; // Redirecionamento
+            return true;
+        }
+
+        alert("Credenciais inválidas. Tente novamente.");
+        return false;
+    }
+</script>
+
+</html>
